@@ -1,0 +1,28 @@
+environment: dev
+
+springbootadmin:
+  container:
+    name: spring-boot-admin
+    port: 6110
+    image: colinbut/spring-admin-server
+    tag: latest
+    nodePort: 30007
+  replicas: 1
+
+registrationsvc:
+  container:
+    name: registration-service
+    port: 6111
+    image: colinbut/registration-service
+    tag: latest
+    nodePort: 30008
+  replicas: 1
+
+customersvc:
+  container:
+    name: customer-service
+    port: 6112
+    image: colinbut/customer-service
+    tag: latest
+    nodePort: 30009
+  replicas: 1
